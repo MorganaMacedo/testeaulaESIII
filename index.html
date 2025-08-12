@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gurias Tech - Evento</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+        .banner {
+    height: 80vh;
+    background: url('Html.jpg') no-repeat center center;
+    background-size: contain; /* Ajusta a imagem inteira sem cortes */
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .buttons {
+            text-align: center;
+            padding: 40px;
+        }
+        .buttons .btn {
+            margin: 10px;
+            font-size: 1.3rem;
+            padding: 15px 40px;
+            border-radius: 30px;
+            transition: transform 0.2s;
+        }
+        .buttons .btn:hover {
+            transform: scale(1.1);
+        }
+        .about, .bio-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #1e1e1e;
+            border-radius: 20px;
+            margin: 40px;
+        }
+        .about h2, .bio-section h2 {
+            font-size: 2.8rem;
+            font-weight: bold;
+            color: #ff0077;
+            margin-bottom: 20px;
+        }
+        .about p, .bio-text {
+            font-size: 1.4rem;
+            color: #bbb;
+            max-width: 900px;
+            margin: auto;
+        }
+        .event-details i {
+            color: #ff0077;
+            margin-right: 8px;
+        }
+        .programacao {
+            padding: 60px 20px;
+            background-color: #222;
+            border-radius: 20px;
+            margin: 40px;
+        }
+        .programacao h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+            color: #ff0077;
+            margin-bottom: 30px;
+        }
+        .table {
+            text-align: center;
+            color: #fff;
+        }
+        .bio-section {
+            padding: 60px 20px;
+            background: #1e1e1e;
+            border-radius: 20px;
+            margin: 40px;
+        }
+        .bio-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            text-align: left;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #2a2a2a;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .bio-container:hover {
+            transform: scale(1.02);
+        }
+        .bio-img-wrapper {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #ff0077; /* ou outra cor se desejar */
+            margin-right: 20px;
+        }
+
+        .bio-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .text-justify {
+            text-align: justify;
+            text-justify: inter-word;
+            }
+
+
+
+        .bio-text {
+            text-align: justify;
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+        .footer {
+            background: #ff0077;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+        }
+        .btn-explore {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 30px;
+            font-size: 1.3rem;
+            background-color: #ff0077;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
+            transition: background 0.3s ease-in-out;
+        }
+        .btn-explore:hover {
+            background-color: #cc005e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner"> </div>
+    
+    <div class="buttons text-center py-4">
+        <button class="btn btn-outline-danger btn-lg mx-2" onclick="document.querySelector('.about').scrollIntoView({behavior: 'smooth'});">📌 Sobre o Evento</button>
+        <button class="btn btn-outline-danger btn-lg mx-2" onclick="document.querySelector('.programacao').scrollIntoView({behavior: 'smooth'});">📅 Programação</button>
+        <button class="btn btn-outline-danger btn-lg mx-2" onclick="document.querySelector('.bio-section').scrollIntoView({behavior: 'smooth'});">👩‍💻 Conheça as Participantes</button>
+         <button class="btn btn-outline-danger btn-lg mx-2" onclick="document.querySelector('#organizacao').scrollIntoView({behavior: 'smooth'});">📋 Organização</button>
+         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNqWE0OjUEGKXccpMz5_yjy-nm-ktFN1t1JVrTolA_kAmdmg/viewform" target="_blank" class="btn btn-danger btn-lg mx-2">📝 Inscreva-se</a>
+       
+    </div>
+    
+    
+    <div class="section about text-light">
+        <h2 class="text-center text-danger mb-3">💡 Sobre o Evento</h2>
+        <h3 class="text-center text-light mb-4">Gurias Tech: Inspirando e Conectando Mulheres na Tecnologia</h3>
+    
+        <div class="container px-4">
+            <p class="text-justify">O <strong>Gurias Tech</strong> é um evento inovador que visa incentivar a participação feminina no universo da tecnologia, proporcionando um ambiente enriquecedor de aprendizado, networking e troca de experiências entre estudantes, pesquisadoras e profissionais da área.</p>
+            <p class="text-justify">Organizado pelo <strong>Mestrado em Engenharia Eletrônica e Computação (MEEC)</strong>, o evento tem como objetivo fortalecer a representatividade das mulheres no setor tecnológico e fomentar debates sobre desafios, oportunidades e tendências do mercado.</p>
+            <p class="text-justify">A programação inclui palestras, apresentações de trabalhos e atividades interativas com especialistas da indústria e do meio acadêmico, abordando temas como <strong>inovação, inteligência artificial, segurança cibernética, engenharia de software, hardware, empreendedorismo, radiobiologia, aplicação de materiais na engenharia</strong> e muito mais.</p>
+            <p class="text-justify">Se você deseja se inspirar, aprender e se conectar com outras mulheres que estão transformando o cenário tecnológico, o <strong>Gurias Tech</strong> é o evento ideal para você!</p>
+        </div>
+    
+        <div class="event-details border rounded p-4 mt-4 bg-dark text-center">
+            <h4 class="text-danger mb-3"><i class="fas fa-calendar-alt"></i> Informações do Evento</h4>
+            <p><strong>Data:</strong> 02 a 06 de junho</p>
+            <p><strong>Horário:</strong> 19h às 22h</p>
+            <p>
+                <strong>Local:</strong> <br>
+                <span class="d-block">📍 Dia 02 - Presencial (Sala 410C)</span>
+                <span class="d-block">💻 Dias 03 a 06 - Online 
+                    <a href="https://meet.google.com/xax-xdqu-zta" target="_blank" class="text-decoration-underline text-info">via MEET</a>
+                </span>
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfNqWE0OjUEGKXccpMz5_yjy-nm-ktFN1t1JVrTolA_kAmdmg/viewform" target="_blank" class="btn btn-danger btn-lg mt-3">📌 Inscreva-se</a>
+        </div>        
+    
+        <h2 class="text-center text-warning mt-5">📢 Submissão de Trabalhos</h2>
+        <div class="container px-4">
+            <p class="text-justify">A <strong>submissão de trabalhos</strong> no Gurias Tech representa uma excelente oportunidade para compartilhar pesquisas, inovações e experiências na área de tecnologia, incentivando a participação ativa no evento. Os <strong>resumos</strong> devem ter até <strong>300 palavras</strong> e podem ser submetidos até <strong>10 de maio de 2025</strong>.</p>
+        </div>
+    
+        <div class="event-details border rounded p-4 mt-4 bg-dark text-center">
+            <h4 class="text-warning mb-3"><i class="fas fa-file-alt"></i> Detalhes da Submissão</h4>
+            <p><strong>Apresentações:</strong> 03, 04 e 05 de junho</p>
+            <p><strong>Horário:</strong> 17h às 18h30</p>
+            <p><strong>Prazo para submissão:</strong> 10 de maio de 2025</p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKiq-hZ1ZALrahlA3HzFPN-UD-VGenfVsgt5T7qtDLYjGXeQ/viewform" target="_blank" class="btn btn-warning btn-lg text-dark mt-3">📥 Submeta seu Trabalho</a>
+        </div>
+    </div>
+    
+
+
+    <div class="section programacao text-justify">
+        <h2 class="text-center text-danger mb-4">📅 Programação</h2>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle text-center table-dark">
+                <thead class="table-danger">
+                    <tr>
+                        <th>Horário</th>
+                        <th>02/06</th>
+                        <th>03/06</th>
+                        <th>04/06</th>
+                        <th>05/06</th>
+                        <th>06/06</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>19h15</th>
+                        <td><span class="badge bg-primary">Rociele Prietsch</span></td>
+                        <td><span class="badge bg-secondary">Simone Costa</span></td>
+                        <td><span class="badge bg-success">Laura Quevedo</span></td>
+                        <td><span class="badge bg-warning">Susana Lalic</span></td>
+                        <td><span class="badge bg-info">Daiane Freitas</span></td>
+                    </tr>
+                    <tr>
+                        <th>20h30</th>
+                        <td colspan="5" class="text-center fw-bold text-danger">☕ Intervalo</td>
+                    </tr>
+                    <tr>
+                        <th>20h45</th>
+                        <td><span class="badge bg-primary">Mariana Siniscalchi</span></td>
+                        <td><span class="badge bg-secondary">Cristina Meinhardt</span></td>
+                        <td><span class="badge bg-success">Alexandra Zimpeck</span></td>
+                        <td><span class="badge bg-warning">Amanda Dantas de Oliveira</span></td>
+                        <td><span class="badge bg-info">Lisane Brisolara</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        
+        <div class="section bg-dark text-light py-4 rounded">
+            <h2 class="text-center">🎤 Temas das Palestras</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-secondary text-white border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Rociele Prietsch</h4>
+                                <p>Empreendendo na Engenharia de Computação: Aprenda além do código, o negócio!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-info text-dark border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Mariana Siniscalchi</h4>
+                                <p>Colheita de energia de ultra baixa tensão com aplicações em IoT e dispositivos médicos vestíveis e implantáveis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-secondary text-white border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Simone Costa</h4>
+                                <p>Computação na educação básica: Reflexões sobre o antes e depois da BNCC computação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-info text-dark border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Cristina Meinhardt</h4>
+                                <p>Circuitos, falhas e conquistas: Resiliência para lidar com barreiras na Computação e Microeletrônica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-secondary text-white border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Laura Quevedo</h4>
+                                <p>Elas codificaram o futuro, mas foram removidas do sistema – Como podemos recompilar nossa história e o papel do Gurias da Comp nesse movimento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-info text-dark border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Alexandra Zimpeck</h4>
+                                <p>A definir.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-secondary text-white border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Susana Lalic</h4>
+                                <p>Radiação, ciência e persistência: Desafios e avanços na minha pesquisa em Radiobiologia.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-info text-dark border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Amanda de Oliveira</h4>
+                                <p>Minha jornada acadêmica na área de materiais poliméricos: Desafios, conquistas e aprendizados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-secondary text-white border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Daiane Freitas</h4>
+                                <p>Aceleradores de hardware para codificação de vídeo: estratégias de otimização em diferentes níveis de abstração.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-3">
+                        <div class="card bg-info text-dark border-0 shadow-lg">
+                            <div class="card-body text-center">
+                                <h4>🔹 Lisane Brisolara</h4>
+                                <p>IA generativa e suas aplicações na Engenharia de Software.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <div class="bio-section">
+        <h2>Participantes</h2>
+
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTEhMVFhUXFxgYFxUXFRcXGBUWFRcXFxUXFxUYHSggGBolHRUYITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGhAQGi0dHyUtLS0tLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSsrLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAADAAIEBQYBBwj/xABEEAABAwEFBAYGCAUDBAMAAAABAAIRAwQSITFBBVFhcQYigZGhsRMyUsHR8AcUQmJygpLhI6KywvEzNNIkU2NzFUPD/8QAGgEAAgMBAQAAAAAAAAAAAAAAAgMAAQQFBv/EACcRAAICAQQBBAIDAQAAAAAAAAABAhEDBBIhMTITIkFRQnEzYYEj/9oADAMBAAIRAxEAPwDyJIpLhRgHZXbyGUryhAl5OlClK8rIGlIOQpXbyhA15dvIF5dvqEDXkryDeTg5QgcCckXFrb2cSY/CJ8/JS9mUgWk66clKsllnCNfCIKW2NUeCooWp5a95OQMD2iCBPZPgu2CsScXHtxVzW2TdoloE5wd05dmh5rONp1GH1Thw0QhUaN9jDmyMJ1bofab8NVXPpC9cqQx4+0B1Hbj92d+XJWGzHm7ebiB6zffwPHvUja1lv0vSNzZjulhMO7iQe07kSb+AXFFBabO5hhw/dCDlb2OqC25UAjjkPgOKrrfZDTOsfMJilYqUaBSnNQA5EYVdg0S2IgCBTKO0qyqJViLZuuyPgUe17OaxpcwuB3yZjmq4uhHO0+rdcrJRGEAQhvqJlSohFyGy6H3klH+st9oJKWXSIdO0A54IoVcQnMqEZFBYdFg1kqTToBQqFpnmpQqwiQLDCzhOFnCALSnC0qWiqD/Vgl9Wag/WkhaSpZKDfVQl9VCH9ZXRaFLJQT6mFz6mF1lZdfaIQuQcYlzsrZ5dkcgBByww81qtnbGiJhQeiVikBxHJbSjRhZZ5H0joYcKq2QGWFo+ygWrZdN4MsCv/AEUhCdZ0q5fZp2Q6o8vtWyn2aoXMm7OUThxGoVvsi6XRHUeILdBeEHHcVq7fYLwiFk20fQ1Cx2Rxadx17Nf8J+LI7pmTPhSVorHbOc1zmnNhI53Zx7se1KrYSWXSJ9ndHsnxj91pNsUcW1hiHgGdzmw1w7oPYgV6f8IPGjo/Vl4gBPqjI+UeaV6Ya4i88RvAK41xzBDxrGBHYtL0n2XEVmjquz4HI/PJZh9PUYHejEvjgmWeqDkpIfCrKJxDhhOY4rtqtMYK7JRLq1xqUA1G+23vVXUr4ptQYAodwW0sqlpaPtA8jKrq9pLuA3IULoYqbstI5CSfdSVUWcXCE8BEo0pmcgJPuV0CR4RWV3DjzRHNTLilFhmWjeO5TNlWepXqNp0mFznGGtGJPwHHRVhavT/oJa36xaHEdZtJoBwwDn4+QRJWyn0SrF9FVZwBq1qbDuEvI8h4otb6J6n2bQw82EeRK9Vc/wCY+CG6OHcU3ahfJ5BV+i61DJ9E/mf/AMVFq/Rrbhk2meVQD+qF7ReHD9SV75lTYiWzwbaHRK1Wdt6pSgTE3mHHsd4qks1G/Ua05TJ5DNex9ObW0UXGoJYDiMMToBzOH7ArzLonZPS1xIzdJgQAB1iOSzZ0omrCnJ8npOw7JdY2d2W5XDcVAbZKzh1XNaNBrHPGE0utFDF7A9m8EGOeAhZIxbOluSLhuCRCFs7aVKqMJadx+cVO9CEzbwVuIT4WY6T0BdvagytfUs25UW27MSx0oKaZbpoqtkj0tCrROJaL7BwyI+d6DY6F+zPZqWOjnTIc3zCf0afFRp+6QeWvhPcpNBopVvRnIOIH4XB0Duha4uzmSVMrqNmFeyEEfacOwmMO0z2LzqtZy0lpzaSD2YL0/o0IoPYfs1HNdw0PcD4LI9MbD6O0kx67Q783qu8R4pkOhM/sytJsOcORCbt6hde1wye0HtGB93epbqcVBxaUTbTL1npu9l0dhH7BW1wDF8mduI7G9U8MUmNRWhLoYCrMgg8VJsEFrmkYz4INYdUcvJPsDv4ke0PdPuVrsF9Avqx3pK39HwCSZsA9QoqZR2OgEbyPBRyE+mUpDGEJSTS5KVZBy230QWu5tG7pUpVGRyioMPyeKw15aHoBaLm0bO4nC+QSTGDmuace1WuyM+iS8cPJMNYb/wCZcicWukcCCEP0ZnPTgnAB73PwQKttpNMOqMadzntB7pWB+ljbVShTpUKT7rq14uc3BwY26IBzF4uzGjSF5bs2xXnjh1jhnGPzzQSnQUY2a3prtl1prljHfwmuN1oyJGBce29HADetH9HuxbjDUd6zvL5CyWxdmOfWawDrGeyGk+QXrWzqAaxrRoAFhnJyZ0sWOik2xtu1UKl2nRa5hyqOddAnedI35KBQ6bV3ODXUgScCxkvcI1IutEHMQSto9gjEKtfsenN4AAicW9U48R84olJVQThO7sZsZ9OoRUa26dY47uCt7bXDRiVBpMDcGzvzJknmq+3Vi58btEFjWvskWgWiqZp4N0xI7ZCr7bsS2FuNYb4mRyxbK7bqlYU3vFZtOG3mhzXOcSMmgYM8ysvT6YWtriHA1aYxLjT9GQDh6l9wjkUzbwZ3kV0y62DQIdddmD59V3g89yLbMX0nH1pax3MOLQe++OxE6O1PSXaujrx/q/4odo/1Mcg/zh7f5mvHaUyPRmn5EXZDv9xoHOvdlRt/+5QunVG/To1YxBLT+YT5tKn2NkMLh90n8gLR4tS2rS9JZ3s1iRzBkeIATYPmhE1wecVB/EZ2jwRbYybK8biD3OHuTazf4lP8XuR6g/g1R913kUz4YpdmcposKLZjipT0lDBn2SNx80Br4LXbvcUdmvJR3jDkfNRlo0Ppmb0lnfSlcReowPTQZ1LihmmVMLU26qouyJeKRf8AMKQ5ib6NVRdgbyl7LeGPFT0gYWEEYEkngI0QfRJrmKdFnomw+nlGnHpb0gReDSQezMLV7P6Y2epDmVgS2ZaW3YB1cDGHFeHNYnXEW9lbUbH6SNrNtFqpuYcG0wzCYkOc4wcjg4ZIfRSlg55GAnti6B4lZN0nAk/BbvorZf8ApCXT1nta3kLzz4k9wQTfAzGuUaHoi0vtL3gDqUv5nEgnuvLe2RggLD9Gf4bruM1DiR9oAG6Dode9bajVAGKyPs6eJ2iW6gFGquaBhinPrTyUO0tc5rmsdccR1XQDB0mRiFGxqQSnZ3esQqJrZqkcVa7R2g+lSi6XvAxDB6xAxIk4BV+zGuc9rixzXOEljokc4KjXwQtG2YRw3fsodq2PTIPVb2NAPer00sFDtGRVytAqEWVNhoNp04bhdnxB+Kg2ujeDnD7LoPYQ9v8AVUUt9TA80GxD/W3Pph450zP9Lz3JsXwYMkaZDLYZWj2Z7TUk+LnIPpuqHcB5tn3lWJoTSqDdlxxa755Kuo0JY5h1Y4fyFMT5QlrhmH2xRu2hgyF4kcokeaBVfDKn4XeSt9sC+aL9QMf0nyx/Us/Vf1X8itFmauShHVKe6sSuWgdYppZhOiQND0HY9hQ3D1uw+P7p1mzHNdu9Yje0/H3K/gr5IiSSSHkMtSmkLsrhKaxKGwuQnJQoWMLUx4RoTHBUWhrGp9xOpNT4UolggxbKwWoss9HL/VLiNNJHcPFZNoxV/ZWl1GmBjiTH5vgZS5DcZtejFKKxE9VriW8nTA+dy2gogrz6xWv0MHW+HO5Tl3DxXodGoCAQZBEg7wcllfLOli6ANdHVJx5YIhDokXSd3+VysNdNeCG+xE9ZjiO1PjjTQ+P7odaKuAbiCd6bZCGFAc4tEOgnnrkhGvhiCDuP7JU47WUy3tNqGirbTaAAShUpjHNQrYd+SXKVk6RFtdeGk6tbPackXYL7zLOcxLqTjvkQCeF1yg2oS2Dm8uHc3/Cf0ELvQ1WnJr2VGzunfxjxKbjMGVltSpzQe3UXR7vnkgih1C6IiHcozVo5giuYwuyRwl0+E9yVBoc38Qg8+zTM9qeujO+zzm3USGPB+yXQd4dEFY+sZaRMSvTNqWOb7Ixcx36mAkR2tjuXmFtETG/901O4iGqZWuGc5ptOrdO8HMb1ytmUFLbGImh7b7buUjPfKc4fxAOJHfgoTHQQplvqfxCQIxkeatPgprkF6ApLn1p3DuSV2iUyWkmgroKIAckuSuhWQcxkphUt7wxuHrHwChvKp8FoVGoFIDSfjkO8o2z9k1nsv06L3tBguDTdBOAF7InhorKn0XtRxLAPxO+EoJZIx8nQyOKc/FNkCjQZm94HAYk+UK5sdpwu0m3QD6xkl2YMeGnDm2l0UtGZu8rx84V1s3YNYYkMDt+LoA5/tCRPPjrs0Y9PlT8QV5uN4w0RO85+K13Q3a3pKbm3YFN11vIibvMT4hUFfo492b8JGAb86rT7F2a2gy43WXE6knMrL6ib4N0MbRoAAVErWP2XFvJdpWoDB2aJ6cJykg+Svq2V2rifnguUqQaZKkWmsBmqi122eSFtF8slVawnBVlurzIbndJATXVnEdUQN6q7LIrCTnge35BQLkXk9qLKmL/ooyvNPY8OHm0qy6M0IfXpj2ZHOYHZDmruz7JDSPZm7v0MHunsO9T9k0YtD+NM/wBTR/atUUc+TJbqUtqcaZHe5w96hbDOF06R2j/HuV0xu/UH3H3lZ/ZT41xZg4b2HAnsw+SmIU+we3bLde1+5wn8LzBntHivJdvbOuPc3UOc04aidOQ08JXu9pswqsdTdqC2R7LxAcOWH6eK8h6c0Sy0hxyeGu3ddpDaniw47ijiBM8/cMUOER6ahZECUy2nrNO9jD4Ae5RHKVbB1aR3sjuc4KLosDfXFz0Z3HuSU5IHFTeiNqBGDgmmmDojYBwOVhsnZlWu6KTC6MzoOZyUrot0aNqqatpti84f0jj5dy9i2fsplJgZTaGtGQHzieKy5tRsdR5ZswaXf7pdHmTeg1Zxl9RreQLoHgrjZ/QqizF81Dud6v6Rn2yt2+yqO+msjy5Jds6ENPij0iQ1jWWJgAAAccAMPXOihsc1ytLdS/6SmN7j5vPuWcNnIMhXqL3L9IZp6p/stG0wjtoBVTqT4lpxUyy7Qn1sHDMJaYxomVrOAxxjLHuxXH5t4o7KgLSDqFGpgkA7kTVdCE/cwz7PIQH2TDCRyKtbPknPpN5ckW0uzL2mxuJzJSs+ydXFXz6AnVJ8AYBDtDUijtrQxpuhUtio43iNAe12Q5wJ7Vd7VM4bzCbaaYa0tGY/qMADxjsR4jPn+EWtipTTbUG8E82G6ewzPaVMsNICv+Ut54sP93io2ybQA5lHQsIncQAPe5TGf6rDvDu8Ef8ABbF0c6XYeieq3fDh/KPgsfa3uZaCWmPXx4iX9xECFrb0dhcP5Xj3LMbbpxW/SfENd7ld8A/Jc2a0eq9sRHXbw9ocPKBuWV+knYorNbUBIuG+6NWloDjzEDv5qXZrSQwBpxERGecYHnE8JUw230tORBIkYR1owcIynPDI9qtSp2ypRPELXsWo0S0Xm8M+7VVS9UtNkAdepQW6s1brgDmOGYVLtvYFOs0vZDKgxnJrvxbuae4Jq4iVKnTME4K2p0RdZeHWaDhoJcT3ollsQbiSC7hiByO/iiuACkYV2SU/oFjvSXbySLgCyvDkWgwucGtEucQ0DeSYAUWVrfo4sHpLSahypNn8zpDfC94LPknti2asWPfJRPSejGym2ek2mMwOsfacfWPf4QtTQAIVVSwU6jUhcuEubZ2JR4pB69FQ30FPFWUNy0KKYu2h20WRRojhPh+6o7RACvtvOg0m7mO/shUNdkodR5DNP4knY7JBlRdsbPxlue9T9lCMFPLWuF0qlDdEJyqRlLDbLroqd+iuKDgZaI3jiNfHdvCZtHZQOiradB9Mi6cNxy7N37oOVwynFP3I0ljOCK8qusVfDE9uv5hoeWHkpbnJifAPZx7lFtNWAiVXKI9k4kpbDRXuaXOB44J9RkuaON4nvM909wOqmBoGPd44nhI7ZQ6gAa44ExE849wIVRdC5rcAsph4f7Mk9uXiZ7FoGVg5tKoBg43jwLsHD9TnDsWTtFqGIAzAHHPz/ZW+yKp+okTiyoI4NJDvMOWuE/gxZoVyXFQY/nP/AOnxHes5t9wvtJkgtgxzcfI+C0t8Gq8ey8H9Tm/A96y23xLG8yOfVY7+5MukxFckCtVaIDRmbpJOMEGYyxzVbsu1ObaHNggPbeywD2m67xE/mT6zZaATjPkZ8QY7VEoC7WL34Q4lo1Ie3rE/dBaBxOA1gbtEapjekOJbVpOuvOe52EwYz1IniqGptd7uo8NcNZEeUQrC12nrOY6Q0ujDMXAAHcwQfFVNrpEEjCfAzkQVrh0Zp9ieynHUJY7c4y0/m07R2qHUpOycMeQy5jMJ9OmQce5HdawGm+AWDfpyO+UwCrIfz84riZ/8rZ/Yq97V1DuiV6ciiXqH0VUIoVH+1Ujsa0fEry5eufRo2LG3i55/mI9ywap+w6WkX/Q2bUam5BBSD1z0dQnMcnTOCFTRrK2XtH3h5rVjdtC5qkc6QPm0hu6mD3ucP7VBqMR9qOvWyp91rG/yh39yY9VldyZeLiKB06t0yp2BxGaqahxRaFpIQwlXAyUb5LYHDFQ7VTGB4/sustEptd+BTG7QCVEc9U4YFGpWgag5aGBpoQdxyQHoSTdDHjTD1643E8b3HdG5QLRUdvjkOeRMnU9wU5oAElJlnnE66bgqdsFRSKr0bjm4nt1TndUYq0dRAVRb+sboy1KDbyXKSSK1zg9xH2dePBaXo4yW1mOAxa0xxDro7Ouolg2cG4xjxyE6nj8OSl7OcGOqEEnDM6w9p9y0we1qzFkW5MPZLQTaqo0cBHNp/wAqt20SWgTHW/spj4o2z5NoD9C4nvLvig7etTabQSJLnEADk3EnsTItyTSEtKL5KW1WinTxIvHPEajUNPv7lXvpeleKwN5rgAYOESJx3ggYGDmodptsuLixrpEZv0zjrYaoFC1Zsb1CcWObhdf++XcnrBJRM0syb4Im3gRWcIPceZ8SUGmJHWz04Didyutp213VvQ5rhqBIIzE55qtqAOyBjn8csPJa4LgzS7Iz9Rg5vHDDzCj2u46mWiY9+krlstGjch4/soRtBG7iNFbZSKj6md4SU/0jNzv1D4JJVIZuZWUKTnuDWiXOIAG8nJe49G7D6GjTpey0Anec3HvJWG+jvYMn6y8YYimPAu9w7V6VZmrmanJb2r4OtpMW1bn8kgJtU4hFAQrW3I8fNZ64NafJMoFT9miarOflJ9yr6GSvdiUM3nkPf881q08baFZpVFlE43q9d3/kLf0dT+1deiWmnctNVp+1D2910+LfFcqhLyKpMOD4RDe1cDE9zVyEtDbOtRxkhAIlNqNAsVMCI3Ydy6KQTAIJ7+//AAmvqGYHbwCjIdAk8B4n9kWUFzo+dEypVQ2RjbVWnAINKzxHf8EZgAMnPv8ADU+C450nDU75PaVTdAVZNoNEOdoB36k8zgFCpRdgAePzCsmUos73b5juA+fmKa1V20247sBwWhwb2pGeTjFNsJs+0AVmMyvTA5AnuCo+kj5EjE33DwZPgu9Gqzn2kF2hc4cJYWkeXcg7TfLiP/LU8qfwW7T4djpnN1GXfyigFn1PP90CpTGPz84K0tGIJHb86qKW7/8AHNbWlRjTOjrth3rZ9uvac+cqwsGzrjbzhidNw+KsNh7EIAq1BB+y3UDeRv8AJTrVS3Lk6jVW9sejrabS0t0lyeZdI7OKNTAdV2LY0Oo8e4qobRLsdN2pC3vSTZ3paTgIvDrN5j44hY2yZYjvWrDPfEx6jH6c+Oh9+n93uSRfRt3BJaKM9o9SsdmDGNa0QAAABoAplJMakTC8+z0pIY9K0GWlRfSKPXtcBREZd2AX4A18N5Wvs9MNaAMgFlOg4vsfUPtXRyABPifBasuXU0+PbG/sw5p3KvopekdkLgKjR1mE4DMtPrN9/MBV94EAjIiVpHHQrOW+j6Kp9x5/S449xz5zvS9Ti/JDMGT8WRnhMRnIRWE2WEYpLIUC8pNF6JMFke2Wgt6wYXNabrnCIBMEDOdRpGK60CJGuM7062WNrsbzhMEtDiGuIyJbkTxTcsArzuHGz/QMKnzu++P0CcmwiErgCRY840JUhiEUNwTajmsaS43QMS7cNTxPDUkBXCLk0kBKSirZMtdqFOzwciZxw1kDiYE8liNoWt1R7eUxzJI7mx4o22dqOrOwF0ZMZ7DPvffOBJ7FDtGDj2DnAA9y7+LDtdnBz59/CJGwOraW/mHgV3aTReGoPW/UAJ7YlC2U6KwduDj/AClNtz4FOP8AtgdgJCYlUrM7dxI9QqdsWwhzhUfi0Hqjed/JR9mWE1TJ9QfzHcOH+Fo2U4EBYNZqvwh/p0dHpfzn/hJdWlRa2Ka8lBdVXLo6hDtdNeebVo+iruGh6w7c/GV6RWdKxPTOj6j+JB7cfd4rbpZ1KjBrIXC/oqfSc0lBvJLpbjk7T2trwRIxCa9+Cpab30j1TLdWn+06KdRtrKgwOOoOY7FwLPT0KvXhU1ptLnubTZi5zg1o3ucYHiVK2g6AnfR3YjWtxqO9Sg2RxqVJa3ubfPOFq0+PczPmybUeobHsDaNJlJuTRE7zm53aST2qYUmpFdMwgnqJtCzelpluum/eI4g4qY5BJgqNXwWjM0HyCDg5phw3EfPik8K021Yf/upjEeu0faHxGnduitkOEg4LlZcbhKjfjybkRiiUyo9paZRKLsUoaSKzlHlPrnRNptS5dhLocGJ11EDU1xhXtb4KchtWqGgkkADHFZXae0jUMCcDhw4x7XlzXds7R9I66w9Qa+0d/Iaf4UENAXZ0ek2e6XZxdXq972x6Fdhcc684nfJ5JpMp16F0DnhrM+HDjh+oR71yhR9MKbTuMx7N4z7u9Qa9rFOHnQgwNYMwOKuNgCGOJz9I8coMQOGE9qwazNsVLs3aPBvlb6LugwNAaBAAgBOcUJr1xzlxrOyDqPUR/wA/JR6qi1CqTIBqPVD0np3qRx1Bx5q5qFV20qN9jm7wR3p+GVSQnNHdBowvoH/9t/6HfBdUj6tad7/1H4pLpbl9nI9OX0emWmngqK3tIM5EZEZ96t6lrBVbbHgyuPXJ6F9FLadvPb1agke0MO8L1D6KKP8A0pq61ajj+VkNA7w7vXju2mZr3P6OqQbs+zgewT+p7ne9dTTRSjZy80m5UahIriRK0AjXITwNURxTHKy0CFQszxYdd3P4ql2tY/ROvt/03HH7jjryPnzwu793PFu/dzCG+kACIvU3Zt4HVvDgl5camqYcJOLszFYplHNO2lZzQcBnTd6j/wC08R86oNB2IXIknF0zfFqStEi0OXbE8OaHDEHJMtEEwj7MsmTGDLw4kqlHc6RblSDNpkmAJJyA1Wc6R28EmiwzGFRwyJ9hp1G865DCSbLpJtcUQbPRM1DhVqjNo/7bNxOp055ZB2WC7Gl0ij7pdnG1ercvZHo4uE6JxCZ86Lec8cME1jC4gNEkmABmSmuK2XRnYvo2+kqDruGA9gHTmde5BKVDcWJzf9Gb2xsb0dPrY+1u7OS7sCqC1wGhHdED+nHjO9avblnDmELA7Jcadpu6OBb25g94jtXO1cN0bOrhe1o1QcnOKAwqQuSbgRCE9ikuahuChRCq01Br01bPCi1qaJOiNFP6JJTvRJI9/wDYG0h6KPVSSQx7Gvoz22Ph5he6dAf9jZ//AFj3pJLq6fxOXk8zRpOSSTiDE1ySSstDQhWL1O0+ZSSUIyq6S/7Sp+Nv9TVnNnpJLl6z+Q26fxf7JlbP53rRdHPUf+IeSSSrSfyFajwPMHZv/E7zXDmezyCSS78ejz0uxOy7QmO958ikkrZQ/Zv+rS/9jP6gvTRkkks8+zdp/ErdpZFecVf90z8bfNJJIzeLNUOzS081LakkuIbxFBeupKFAnIL8kklCwCSSShD/2Q==" alt="Rociele Prietsch" class="bio-img">
+        </div><p class="bio-text">
+                <strong>Rociele Prietsch</strong> é Engenheira de Computação e especialista em IoT há mais de 4 anos, fundadora da Dream Tech que atua no processo de automatização de residências, ou qualquer ambiente, utilizando equipamentos sofisticados, modernos, com tecnologias diversas, com comandos integrados aos seus dispositivos móveis, proporcionando conforto, segurança, praticidade, lazer, tranquilidade e economia para a sua Residência.
+            </p>
+        </div>
+
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="data:image/jpeg;base64,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" alt="Mariana Siniscalchi " class="bio-img">
+        </div><p class="bio-text">
+                <strong>Mariana Siniscalchi</strong> é Engenheira Elétrica e doutora em Engenharia Elétrica pela Universidad de la República, Uruguai, tendo concluído ambos os cursos em 2014 e 2020, respectivamente. Ela tem se envolvido em diversos projetos de pesquisa e desenvolvimento, com especialização no projeto eletrônico em diferentes níveis, incluindo transistor, circuito integrado (IC), placa de circuito impresso (PCB) e
+                projeto de sistemas. Atualmente, é professora assistente no Instituto de Engenharia Elétrica da Universidad de la República, Uruguai. Também é membro do Sistema Nacional de Investigadores do Uruguai e ocupa o cargo de Presidente do Capítulo Uruguaio da IEEE Circuits and Systems Society (CASS). Seus interesses de pesquisa incluem circuitos de colheita de energia para aplicações de ultra-baixa tensão,
+                osciladores de ultra-baixa tensão e RF, além de outros circuitos voltados para a Internet das Coisas (IoT).
+            </p>
+        </div>
+        
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4703829Z3" alt="Simone André da Costa Cavalheiro" class="bio-img">
+        </div> <p class="bio-text">
+                <strong>Simone André da Costa Cavalheiro</strong> é professora adjunta na Universidade Federal de Pelotas (UFPel), com doutorado em Ciência da Computação pela UFRGS. Sua pesquisa concentra-se em Métodos Formais e Pensamento Computacional, explorando abordagens inovadoras para o ensino e aplicação da computação em diferentes contextos educacionais e científicos.
+            </p>
+        </div>
+    
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K8173156P8" alt="Laura Quevedo Jurgina" class="bio-img">
+        </div> <p class="bio-text">
+                <strong>Laura Quevedo Jurgina</strong> é doutoranda em Computação pela UFPel, com mestrado e graduação em Engenharia de Computação pela mesma instituição. Seu trabalho foca no desenvolvimento de tecnologias educacionais tangíveis e multissensoriais para a alfabetização de neurodivergentes e populações em situação de vulnerabilidade social. Fundadora do projeto <em>Gurias da Comp</em>, ela promove inclusão digital e equidade de gênero na tecnologia.
+            </p>
+        </div>
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4764249J4" alt="Cristina Meinhardt" class="bio-img">
+        </div><p class="bio-text">
+                <strong>Cristina Meinhardt</strong> é professora adjunta na Universidade Federal de Santa Catarina (UFSC), onde leciona nos cursos de Ciência da Computação, Sistemas de Informação e Engenharia Eletrônica. Atua como pesquisadora e orientadora nos Programas de Pós-Graduação em Ciência da Computação da UFSC (PPGCC) e da Universidade Federal do Rio Grande (PPGComp/FURG). Possui graduação em Engenharia de Computação pela FURG, além de mestrado e doutorado em Ciência da Computação pela Universidade Federal do Rio Grande do Sul (UFRGS). 
+            </p>
+        </div>
+        
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="https://media-gru1-1.cdn.whatsapp.net/v/t61.24694-24/471729488_554096367776394_8373313292281070836_n.jpg?ccb=11-4&oh=01_Q5AaIWbfVFWyp720E-KZOh6v1WdzjvKpRdxh3p6KeM_gPbKf&oe=67F6F068&_nc_sid=5e03e0&_nc_cat=105" alt="Daiane Fonseca Freitas" class="bio-img">
+        </div> <p class="bio-text">
+                <strong>Daiane Fonseca Freitas</strong> é mestre em Engenharia Eletrônica e Computação pela UCPel e possui graduação em Engenharia Eletrônica pela UFPel. Sua pesquisa está voltada para arquiteturas de hardware dedicadas à codificação de vídeo, contribuindo para o desenvolvimento de sistemas mais eficientes e de alto desempenho.
+            </p>
+        </div>
+    
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4757266A3" alt="Amanda Dantas de Oliveira" class="bio-img">
+        </div><p class="bio-text">
+                <strong>Amanda Dantas de Oliveira</strong> é professora adjunta na UFPel, diretora do Centro de Desenvolvimento Tecnológico e da Regional Sul da ABPol. Doutora em Ciência e Engenharia de Materiais pela UFSCar, com pós-doutorado pela mesma instituição. Atua nos programas de pós-graduação PPGCEM/UFPel e PPGCTM/IFMA. Líder do LabCom, tem experiência em polímeros, nanocompósitos e materiais sustentáveis.
+            </p>
+        </div>
+
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4795392T8" alt="Susana de Souza Lalic" class="bio-img">
+        </div><p class="bio-text">
+                <strong>Susana de Souza Lalic</strong> é professora titular no Departamento de Física da Universidade Federal de Sergipe (UFS). Com doutorado pela USP e pós-doutorado na Università di Pisa, sua pesquisa abrange áreas como radiação ionizante, biodosimetria e nanotecnologia, com impacto direto em segurança nuclear e proteção radiológica.
+            </p>
+        </div>
+        
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+             <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4499697Y6" alt="Alexandra Lackmann Zimpeck" class="bio-img">
+            </div>
+            <p class="bio-text">
+                <strong>Alexandra Lackmann Zimpeck</strong> é Engenheira de Aplicação Líder na Cadence Design Systems, com doutorado em Ciência da Computação pela UFRGS e pela Université de Toulouse. Sua atuação inclui pesquisa em confiabilidade de circuitos integrados, computação aproximada e mitigação de falhas em sistemas embarcados.
+            </p>
+        </div>
+    
+        
+
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+              <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4701566U4" alt="Lisane Brisolara de Brisolara" class="bio-img">
+            </div>
+            <p class="bio-text">
+              <strong>Lisane Brisolara</strong>é professora titular do Centro de Desenvolvimento Tecnológico (CDTec) da UFPel, com doutorado pela UFRGS e pós-doutorado na Universidade de York. Sua pesquisa abrange sistemas embarcados, redes de sensores sem fio e engenharia de software. Coordena iniciativas para incentivar a participação feminina na computação.
+            </p>
+          </div>
+          
+    
+    </div>
+    
+
+    
+
+
+    <div class="bio-section" id="organizacao">
+        <h2>Organização</h2>
+
+       
+
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K8486182E5" alt="Morgana Macedo Azevedo da Rosa" class="bio-img">
+        </div><p class="bio-text">
+                <strong>Morgana Macedo Azevedo da Rosa</strong> é doutora em Ciência da Computação pela Universidade Federal de Pelotas e Mestre em Engenharia Eletrônica e Computação pela Universidade Católica de Pelotas (UCPel), ambas com bolsa CAPES. Possui graduação em Engenharia de Computação pela UCPel, recebendo o diploma Dom Antônio Zattera como primeira colocada da turma. Ainda, obteve o título de Técnica em Manutenção e Suporte em Informática pelo Instituto Federal Farroupilha. Sua pesquisa foi premiada consecutivamente entre 2016 e 2018 como Jovem Pesquisadora PIBIC/CNPq na área de Ciências Exatas e, entre 2019 e 2022, na categoria pós-graduação em Ciências Exatas e da Terra, Engenharias e Agrárias. Atualmente, é Professora Titular da Universidade Católica de Pelotas (UCPel). Seus interesses de pesquisa incluem Microeletrônica, com ênfase em Processamento de Imagem, Vídeo e Sinais, Projeto VLSI com Eficiência Energética, Computação Aproximada, Criptografia, Segurança e Operadores Aritméticos Eficientes. Além disso, atua como revisora de periódicos de prestígio, incluindo IEEE TCAS-I, TCAS-II, TVLSI, CSSP, ALOG e TBioCAS.
+            </p>
+        </div>
+    
+        <div class="bio-container">
+            <div class="bio-img-wrapper">
+            <img src="http://servicosweb.cnpq.br/wspessoa/servletrecuperafoto?tipo=1&id=K4239281H6" alt="Chiara das Dores do Nascimento" class="bio-img">
+        </div> <p class="bio-text">
+                <strong>Chiara das Dores do Nascimento</strong> é professora e pesquisadora do Programa de Mestrado em Engenharia Eletrônica e Computação (PPGEEC) da UCPel. Possui graduação em Física (UERN), mestrado em Física Médica (UFS), doutorado e pós-doutorado em Física Experimental pelo IF/UFRGS. É acadêmica do 2º ano do curso de Biomedicina (EAD híbrido) pela UNIASSELVI. Atua nas áreas de Física Médica, com ênfase em radiodiagnóstico e processamento de imagens médicas, além de desenvolver pesquisas com biomateriais, polímeros termomoldáveis e biodegradáveis aplicados à fabricação de simuladores acadêmicos para o ensino em saúde e cursos tecnológicos.Tem experiência em caracterização de materiais, síntese de nanomateriais, filmes finos para dispositivos fotovoltaicos, e técnicas como RBS, XRD, XAS, MEV, MET e fotoluminescência. Integra o projeto Inovare BioSim Lab (Edital Techfuturo Saúde 06/2023), com foco em tecnologias inovadoras para a área biomédica.
+            </p>
+        </div>
+        <div class="text-center mt-5">
+                <img src="https://ucpel.edu.br/img/logo2023.png" alt="Logo UCPel" width="180">
+            </div>
+    </div>
+    
+
+    <footer class="footer">
+        <p>&copy; 2025 Gurias Tech. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
